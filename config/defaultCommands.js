@@ -1,28 +1,26 @@
 module.exports = {
   stay: {
-    command: "!fica",
-    description: "Ficar em um canal de voz"
+    command: "!stay",
+    description: "Stay in a voice channel"
   },
   leave: {
-    command: "!vaza",
-    description: "Sair do canal de voz"
+    command: "!leave",
+    description: "Leave a voice channel"
   },
   help: {
-    command: "!meajuda",
-    description: "Mensagem de ajuda com os comandos"
+    command: "!helpme",
+    description: "Private message with the commands"
   },
   addPermission: {
     command: "!addp",
-    description:
-      "Concede permissão a um tipo de membro. Ex: !addp Cargo1 Cargo2 CargoN"
+    description: "Add permission to a role Ex: !addp Role1 Role2 RoleN"
   },
   removePermission: {
     command: "!removep",
-    description:
-      "Remove permissão a um tipo de membro. Ex: !removep Cargo1 Cargo2 CargoN"
+    description: "Remove permission to a role. Ex: !removep Role1 Role2 RoleN"
   },
   listPermissions: {
     command: "!listp",
-    description: "Listar permissões"
+    description: "List all permissions"
   }
 };

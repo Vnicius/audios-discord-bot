@@ -1,10 +1,10 @@
 module.exports = {
-  busyMessage: "Desculpa, estou ocupado em outro canal de voz!",
-  goToVoiceChannelMessage: "Entre em algum canal de voz!",
-  permissionDeniedMessage: "Você não tem permissão!",
-  permissionAddMessage: "Permissão concedida para:",
-  permissionRemoveMessage: "Permissão removida para:",
-  listPermissionsMessage: "Permissões:",
-  nonePermissionMessage: "Nenhuma permissão adicionada!",
-  listenningMessage: "Digite !meajuda"
+  busyMessage: "Dude, I'm busy!",
+  goToVoiceChannelMessage: "Go to a voice channel!",
+  permissionDeniedMessage: "You have no power here!",
+  permissionAddMessage: "Blessed by the King:",
+  permissionRemoveMessage: "Kryptonite for:",
+  listPermissionsMessage: "Powerful people:",
+  nonePermissionMessage: "Nobody has power!",
+  listenningMessage: "Type !helpme"
 };
