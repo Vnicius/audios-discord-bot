@@ -13,11 +13,11 @@ module.exports = {
   },
   addPermission: {
     command: "!addp",
-    description: "Add permission to a role Ex: !addp Role1 Role2 RoleN"
+    description: "Add permission to roles. Ex: !addp Role1 Role2 RoleN"
   },
   removePermission: {
     command: "!removep",
-    description: "Remove permission to a role. Ex: !removep Role1 Role2 RoleN"
+    description: "Remove permission from roles. Ex: !removep Role1 Role2 RoleN"
   },
   listPermissions: {
     command: "!listp",
