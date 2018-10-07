@@ -12,6 +12,18 @@ or
  yarn
 ```
 
+## 🏃 Run
+
+```
+  npm start
+```
+
+or
+
+```
+ yarn start
+```
+
 ## ⚙️ Settings
 
 ### Default Commands
