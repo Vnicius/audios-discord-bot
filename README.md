@@ -19,8 +19,8 @@ or
 You can personalize the default commands in
 
 ```
-  confing
-         ↪️ defaultCommands.js
+  config
+        ↪️ defaultCommands.js
 ```
 
 **Commands**
@@ -35,8 +35,8 @@ You can personalize the default commands in
 ### Default Messages
 
 ```
-  confing
-         ↪️ defaultMessages.js
+  config
+        ↪️ defaultMessages.js
 ```
 
 **Messages**
@@ -93,4 +93,13 @@ https://discordapp.com/oauth2/authorize?client_id=[YOU CLIENT ID]&scope=bot&perm
 
 Access that URL to use your bot
 
-## :haiti: Heroku tips
+## :cloud: Heroku tips
+
+1. Add the Client ID and Token values in Settings ➡️ Config Vars
+
+![Heroku Settings](./images/heroku-vars.png)
+![Heroku Settings config vars](./images/heroku-vars2.png)
+
+2. Disable Web Dyno and enable the Worker in Resources
+
+![Heroku Resources](./images/heroku-res.png)
