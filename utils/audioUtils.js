@@ -21,7 +21,7 @@ function getAudiosTree(path) {
 function recursiveDirs(tree, path) {
   let files = fs.readdirSync(path);
 
-  files.forEach(fileName => {
+  files.forEach((fileName) => {
     let dotIndex = fileName.indexOf(".");
 
     if (dotIndex !== -1) {
@@ -32,7 +32,7 @@ function recursiveDirs(tree, path) {
         tree.files.push({
           command: `.${command}`,
           file: `${path}/${fileName}`,
-          type: type
+          type: type,
         });
       }
     } else {
@@ -66,7 +66,7 @@ function getAudio(command, audiosList) {
   let result = null;
 
   if (audiosList.length !== 0) {
-    audiosList.forEach(audio => {
+    audiosList.forEach((audio) => {
       if (audio.command === command) {
         result = audio;
       }
@@ -93,7 +93,7 @@ function recursiveGetAudioByCommand(command, audiosTree) {
   // if no find a audio
   if (!audio && audiosTree.dirs) {
     // search in the directories
-    Object.keys(audiosTree.dirs).forEach(dir => {
+    Object.keys(audiosTree.dirs).forEach((dir) => {
       let audioInDir = recursiveGetAudioByCommand(
         command,
         audiosTree.dirs[dir]
@@ -117,31 +117,32 @@ function sendAudio(voiceChannel, audio, server) {
   // connect to de server
   if (server.getConnection() === null) {
     // enter in the voice channel
-    voiceChannel.join().then(connection => {
+    voiceChannel.join().then((connection) => {
       var dispatcher;
       // send the audio
       if (audio.type === "ogg") {
-        dispatcher = connection.playStream(fs.createReadStream(audio.file), {
-          type: audio.type
+        dispatcher = connection.play(fs.createReadStream(audio.file), {
+          type: audio.type,
         });
       } else {
-        dispatcher = connection.playStream(audio.file);
+        dispatcher = connection.play(audio.file);
       }
 
       // end the connection
-      dispatcher.on("end", () => {
+      dispatcher.on("finish", () => {
         connection.disconnect();
         voiceChannel.leave();
+        dispatcher.destroy();
       });
     });
   } else {
     // if is connected
     if (audio.type === "ogg") {
-      server.getConnection().playStream(fs.createReadStream(audio.file), {
-        type: audio.type
+      server.getConnection().play(fs.createReadStream(audio.file), {
+        type: audio.type,
       });
     } else {
-      server.getConnection().playStream(audio.file);
+      server.getConnection().play(audio.file);
     }
   }
 }

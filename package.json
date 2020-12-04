@@ -6,10 +6,10 @@
   "author": "Vinicius <vinicius.matheus252@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "dotenv": "^6.0.0",
-    "ffmpeg-binaries": "^3.2.2-3",
-    "node-opus": "^0.3.0"
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.7"
   },
   "scripts": {
     "start": "node index.js"

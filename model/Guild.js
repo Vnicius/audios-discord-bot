@@ -50,7 +50,7 @@ class Guild {
     const { permissions } = this;
 
     if (permissions.includes(role)) {
-      this.permissions = permissions.filter(element => element !== role);
+      this.permissions = permissions.filter((element) => element !== role);
     }
   }
 
